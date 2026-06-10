@@ -1,0 +1,182 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+    --color-primary: #F0A500;
+    --color-background: #FAF0DC;
+    --color-dark: #2D2D2D;
+    --color-gray: #666666;
+    --color-white: #FFFFFF;
+    --color-card-border: #E8C97A;
+}
+
+body {
+   font-family: var(--font-body);
+   color: var(--color-dark);
+   background-color: var(--color-background);
+}
+
+html {
+   background-color: var(--color-background);
+}
+
+/* === HERO === */
+
+header {
+   background-color: var(--color-primary);
+   padding: 60px 40px; 
+   text-align: center;
+}
+
+.nav-pill {
+   background-color: var(--color-white);
+   border-radius: 50px;
+   padding: 10px 30px;
+   display: inline-block;
+}
+
+.nav-link {
+   margin: 0 10px;
+   text-decoration: none;
+   color: var(--color-dark);
+}
+
+.hero-title {
+   font-family: var(--font-heading);
+   color: var(--color-white);
+   font-size: 3rem;
+   margin-top: 20px;
+}
+
+.hero-subtitle {
+   color: var(--color-white);
+   font-size: 1.2rem;
+   margin-top: 20px;
+}
+
+/* === ABOUT === */
+
+#about {
+   padding: 60px 40px;
+   background-color: var(--color-white);
+}
+
+.about-content {
+   display: flex;
+   gap: 40px;
+}
+
+.about-text {
+   flex: 1;
+   text-align: left;
+}
+
+.about-text p {
+   color: var(--color-gray);
+   font-size: 1.5rem;
+   margin-top: 20px;
+   margin-bottom: 15px;
+   line-height: 1.7;
+}
+
+.about-image {
+   flex: 0 0 700;
+   padding: 20px;
+}
+
+.about-image img {
+   width: 100%;
+   border-radius: 10px;
+   object-fit: cover;
+   object-position: top;
+}
+
+/* === SERVICES === */
+
+#services {
+   padding: 60px 40px;
+}
+
+.services-title {
+   font-family: var(--font-heading);
+   color: var(--color-primary);
+   font-size: 3rem;
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.pricing-cards {
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+}
+
+.card {
+   background-color: var(--color-white);
+   border: 2px solid var(--color-primary);
+   border-radius: 16px;
+   padding: 30px;
+   flex: 1;
+}
+
+.card-title {
+   font-family: var(--font-heading);
+   color: var(--color-primary);
+   font-size: 1.5rem;
+   margin-bottom: 15px;
+}
+
+.card-pricing {
+   color: var(--color-gray);
+   font-size: 2rem;
+   margin-bottom: 15px;
+}
+
+.card-description {
+   color: var(--color-gray);
+   font-size: 1rem;
+   padding-left: 20px;
+}
+
+.card-pricing-unit {
+   font-size: 0.9rem;
+   color: var(--color-gray);
+}
+
+/* === CONTACT === */
+
+#contact {
+   padding: 60px 40px;
+   background-color: var(--color-white);
+   text-align: center;
+}
+
+.contact-title {
+   margin-bottom: 20px;
+   font-family: var(--font-heading);
+   color: var(--color-primary);
+   font-size: 2.5rem;
+}
+
+.contact-info {
+   color: var(--color-gray);
+   font-size: 1.2rem;
+   maring-bottom: 20px;
+}
+
+.btn {
+   background-color: var(--color-primary);
+   color: var(--color-white);
+   padding: 15px 30px;
+   border-radius: 50px;
+   text-decoration: none;
+   font-weight: bold;
+   display: inline-block;
+   margin-top: 20px;
+}
+
