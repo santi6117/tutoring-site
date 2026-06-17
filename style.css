@@ -25,50 +25,103 @@ html {
    background-color: var(--color-background);
 }
 
+.eyebrow {
+   display: block;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-size: 0.85rem;
+   font-weight: 600;
+   color: var(--color-primary);
+   margin-bottom: 8px;
+}
+
+.eyebrow-left {
+   text-align: left;
+}
+
 /* === HERO === */
 
 header {
    background-color: var(--color-primary);
-   padding: 60px 40px; 
+   padding: 70px 40px 70px;
    text-align: center;
 }
 
 .nav-pill {
    background-color: var(--color-white);
    border-radius: 50px;
-   padding: 10px 30px;
+   padding: 12px 30px;
    display: inline-block;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .nav-link {
-   margin: 0 10px;
+   margin: 0 12px;
    text-decoration: none;
    color: var(--color-dark);
+   font-weight: 600;
+   transition: color 0.2s ease;
+}
+
+.nav-link.nav-cta {
+   color: var(--color-primary);
+}
+
+.nav-link:hover {
+   color: var(--color-primary);
+}
+
+.hero-badge {
+   display: inline-block;
+   background-color: rgba(255, 255, 255, 0.25);
+   color: var(--color-white);
+   padding: 8px 20px;
+   border-radius: 50px;
+   font-size: 0.9rem;
+   font-weight: 600;
+   margin-top: 45px;
 }
 
 .hero-title {
    font-family: var(--font-heading);
    color: var(--color-white);
-   font-size: 3rem;
+   font-size: 3.5rem;
    margin-top: 20px;
+   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
+   color: rgba(255, 255, 255, 0.95);
+   font-size: 1.25rem;
+   margin-top: 15px;
+}
+
+.RHPL {
+   font-weight: bold;
    color: var(--color-white);
-   font-size: 1.2rem;
-   margin-top: 20px;
 }
 
 /* === ABOUT === */
 
 #about {
-   padding: 60px 40px;
+   padding: 90px 60px;
    background-color: var(--color-white);
 }
 
 .about-content {
    display: flex;
    gap: 40px;
+   max-width: 1100px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.about-title {
+   font-family: var(--font-heading);
+   color: var(--color-primary);
+   font-size: 2.5rem;
+   margin-bottom: 10px;
 }
 
 .about-text {
@@ -78,15 +131,16 @@ header {
 
 .about-text p {
    color: var(--color-gray);
-   font-size: 1.5rem;
+   font-size: 1.05rem;
    margin-top: 20px;
    margin-bottom: 15px;
    line-height: 1.7;
 }
 
 .about-image {
-   flex: 0 0 700;
+   flex: 0 0 350px;
    padding: 20px;
+   align-self: center;
 }
 
 .about-image img {
@@ -94,12 +148,16 @@ header {
    border-radius: 10px;
    object-fit: cover;
    object-position: top;
+   box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+
 }
 
 /* === SERVICES === */
 
 #services {
-   padding: 60px 40px;
+   padding: 90px 40px;
+   background-color: #FDF6E3;
+   border-top: 3px solid var(--color-card-border);
 }
 
 .services-title {
@@ -114,6 +172,9 @@ header {
    display: flex;
    gap: 30px;
    justify-content: center;
+   max-width: 1100px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .card {
@@ -122,6 +183,13 @@ header {
    border-radius: 16px;
    padding: 30px;
    flex: 1;
+   transition: all 0.2s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-title {
@@ -133,8 +201,17 @@ header {
 
 .card-pricing {
    color: var(--color-gray);
+   font-family: var(--font-heading);
+   font-weight: bold;
    font-size: 2rem;
-   margin-bottom: 15px;
+   margin-bottom: 8px;
+}
+
+.card-pricing-tiers {
+   color: var(--color-gray);
+   font-size: 0.9rem;
+   margin-bottom: 18px;
+   margin-top: -8px;
 }
 
 .card-description {
@@ -146,12 +223,13 @@ header {
 .card-pricing-unit {
    font-size: 0.9rem;
    color: var(--color-gray);
+   font-weight: normal;
 }
 
 /* === CONTACT === */
 
 #contact {
-   padding: 60px 40px;
+   padding: 90px 40px;
    background-color: var(--color-white);
    text-align: center;
 }
@@ -166,7 +244,7 @@ header {
 .contact-info {
    color: var(--color-gray);
    font-size: 1.2rem;
-   maring-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .btn {
@@ -178,5 +256,38 @@ header {
    font-weight: bold;
    display: inline-block;
    margin-top: 20px;
+   transition: all 0.2s ease;   
 }
+
+.btn:hover {
+   background-color: #d99400;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 16px rgba(240, 165, 0, 0.35);
+}
+
+/* === Mobile === */
+
+@media (max-width: 768px) {
+   .about-content {
+      flex-direction: column;
+   }
+
+   .about-image {
+      flex: 1;
+   }
+
+   .pricing-cards {
+      flex-direction: column;
+   }
+
+   .hero-title {
+      font-size: 2.2rem;
+   }
+
+   .services-title {
+      font-size: 2.2rem;
+   }
+}
+
+
 
